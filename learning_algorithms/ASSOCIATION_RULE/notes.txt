@@ -1,0 +1,86 @@
+Association Rule Mining is an unsupervised data-mining technique used to discover relationships or co-occurrence patterns among items in a dataset.
+commonly used in trasacntion data 
+transcation : one observation containing a set of items 
+
+
+3 important measures :
+a. supoort: how frequent an items occur in the dataset
+min_support = 0.05 , by giving this threshold , itemset which has low support can be removed from dataset
+
+b. Confidence :  Given that \(X\) occurs, how often does \(Y\) also occur?
+X= anticedent(before the condition , left side inuput)  Y= consequent (output , after condition)
+Confidence measures the strength of a directional rule.
+
+c. lift : Lift measures how much more frequently \(X\) and \(Y\) occur together compared with what would be expected if they were independent.
+
+important algorithms :
+
+1. Apriori : If an itemset is frequent, its subsets must also be frequent.
+it progressively generates itemsets and remove the itemset that dont justify minimum support threshold
+
+2.FP-Growth : Uses an FP-tree (Frequent Pattern Tree) to find frequent itemsets without generating as many candidate itemsets as Apriori.
+
+workflow of association rule text mining : 
+Transaction Dataset
+        ↓
+Find Frequent Itemsets
+        ↓
+Generate Association Rules
+        ↓
+Calculate Support
+        ↓
+Calculate Confidence
+        ↓
+Calculate Lift
+        ↓
+Select Interesting Rules
+
+______________________________________________________
+Apriori is an algorithm for finding frequent itemsets and using them to generate association rules.
+If an itemset is frequent, all of its subsets must also be frequent.
+
+Apriori
+│
+├── Frequent itemset mining
+│
+└── Rule generation
+
+                 TRANSACTION DATA
+                        │
+                        ↓
+               One-hot encoding
+                        │
+                        ↓
+                Candidate 1-itemsets
+                        │
+                        ↓
+                 Support filtering
+                        │
+                        ↓
+              Frequent 1-itemsets
+                        │
+                        ↓
+              Candidate 2-itemsets
+                        │
+                        ↓
+                 Support filtering
+                        │
+                        ↓
+              Frequent 2-itemsets
+                        │
+                        ↓
+                       ...
+                        │
+                        ↓
+              Frequent itemsets
+                        │
+                        ↓
+               Generate rules
+                        │
+             ┌──────────┼──────────┐
+             ↓          ↓          ↓
+          Support   Confidence    Lift
+             │          │          │
+             └──────────┼──────────┘
+                        ↓
+                 Selected rules

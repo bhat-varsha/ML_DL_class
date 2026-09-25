@@ -1,0 +1,122 @@
+NLP (Natural Language Processing) is a field of AI/ML that deals with processing and understanding human language using computers.
+NLP converts the text into a form that algorithms can process.
+
+NLP workflow
+Raw Text
+   ↓
+Text Cleaning / preprocessin
+   ↓
+Tokenization
+   ↓
+Normalization
+   ↓
+Feature Extraction
+   ↓
+Numerical Representation
+   ↓
+Machine Learning / Deep Learning
+   ↓
+Prediction
+
+
+where nlp is used : ml can apply only to numerical information
+to extract a useful ifnr from text data , nlp is used
+NLP
+│
+├── Text preprocessing
+├── Text representation
+├── Text classification
+├── Information extraction
+├── Sentiment analysis
+├── Language modeling
+└── etc.
+
+
+
+1. Text preprocessing :
+Raw text
+Lowercase     : .lower()
+Tokenization  : converting text into smaller units called tokens 
+Remove punctuation
+Remove stopwords
+Stemming       : Stemming tries to reduce words to a common root by cutting prefixes/suffixes.
+Lemmatization : Lemmatization attempts to convert a word into its proper dictionary/base form.
+Clean tokens
+
+2.  Text representation : converting text into numbers so the ml model can understand that
+                    Text Representation
+                           │
+          ┌────────────────┼────────────────┐
+          ↓                ↓                ↓
+     Bag of Words       TF-IDF          Word Embeddings
+          │                                 │
+     CountVectorizer                    Word2Vec
+
+a. bag of words : converts text into vectors based on occurence of words 
+ignore the order , grammer , or relationship between words\
+in th ematrix form the vetors are given to ml model 
+
+Term frequency and inverse document frequency
+b. TF and IDF :  it assign a numerical weight to word baesd on frequncy and how rare the word is
+How important is a word to a particular document relative to the whole collection of documents?
+gives higher imprtance to word that are frequent and uncommon
+ TF = TF measures how frequently a term occurs within a document.
+ #IDF : IDF measures how rare a word is across documents.
+
+A word gets a high weight if it occurs frequently in a particular document but occurs in relatively few documents overall.
+
+|                              | Bag of Words         | TF-IDF                   |
+| ---------------------------- | -------------------- | ------------------------ |
+| Representation               | Word counts          | Weighted word values     |
+| Uses word frequency          | Yes                  | Yes                      |
+| Considers document frequency | No                   | Yes                      |
+| Common words                 | Can have high values | Usually get lower weight |
+| Rare/discriminative words    | No special treatment | Higher weight            |
+| Output                       | Numerical matrix     | Numerical matrix         |
+
+c. word embeddings : dense numerical vector representation of words 
+words with similar meaning(semantic properties) tend to have similar vecotr representation
+
+NLP / TEXT MINING
+│
+├── 1. Text fundamentals
+│      ├── Documents
+│      ├── Corpus
+│      ├── Tokens
+│      └── Vocabulary
+│
+├── 2. Preprocessing
+│      ├── Lowercasing
+│      ├── Tokenization
+│      ├── Punctuation
+│      ├── Stopwords
+│      ├── Stemming
+│      └── Lemmatization
+│
+├── 3. Text representation
+│      ├── Bag of Words
+│      ├── CountVectorizer
+│      ├── TF
+│      ├── IDF
+│      └── TF-IDF
+│
+├── 4. Word embeddings
+│      ├── Word2Vec
+│      ├── CBOW
+│      ├── Skip-gram
+│      ├── Vector similarity
+│      └── Gensim
+│
+├── 5. Text mining
+│      ├── Classification
+│      ├── Sentiment analysis
+│      ├── Similarity
+│      ├── Topic modeling
+│      └── Information extraction
+│
+└── 6. ML
+       ├── Logistic Regression
+       ├── Naive Bayes
+       ├── SVM
+       ├── Random Forest
+       └── Neural Networks

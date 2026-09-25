@@ -1,0 +1,5 @@
+A3C
+asynchronous advanvtage actor critic algorithm
+
+it is reinforcement learning , 
+in which then agent interacts with the environment ,then give the actions 
