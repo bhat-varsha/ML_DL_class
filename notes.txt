@@ -1,0 +1,740 @@
+AI AND ML 
+_______________________________________
+Artificial Intelligence (AI) is a branch of computer science concerned with developing computational systems capable of performing tasks that require abilities such as perception, reasoning, learning, problem-solving, decision-making, and language understanding
+
+########################
+ARTIFICIAL INTELLIGENCE
+│
+├── AI Approaches
+│   ├── Symbolic / Rule-based
+│   ├── Machine Learning
+│   ├── Probabilistic AI
+│   └── Evolutionary / Nature-inspired
+│
+└── MACHINE LEARNING
+    │
+    ├── 1. What kind of problem are we solving?
+    │   │
+    │   ├── Regression
+    │   │   └── Predict a continuous numerical value
+    │   │
+    │   ├── Classification
+    │   │   └── Predict a class/category
+    │   │
+    │   ├── Clustering
+    │   │   └── Find groups in data
+    │   │
+    │   ├── Dimensionality Reduction
+    │   │   └── Reduce the number of features
+    │   │
+    │   └── Other specialized tasks
+    │
+    ├── 2. What type of learning are we using?
+    │   │
+    │   ├── Supervised Learning
+    │   ├── Unsupervised Learning
+    │   ├── Semi-supervised Learning
+    │   └── Reinforcement Learning
+    │
+    ├── 3. MODEL DEVELOPMENT
+    │   │
+    │   ├── Train / Validation / Test Split
+    │   ├── Generalization 
+    │   ├── Overfitting
+    │   ├── Underfitting
+    │   ├── Cross-validation
+    │   ├── Hyperparameters tuninfg 
+    │   ├── Grid Search
+    │   ├── Random Search
+    │   ├── CV Search
+
+	DATA PREPROCESSING : 
+
+    │   ├── feature enginerring
+    │   ├── Feature Selection
+    │   ├── Standardization
+    │   └── Regularization
+    |   |____Min-Max Scaling
+    │
+    ├── 4. What model can solve the problem?
+    │   │
+    │   ├── Linear Regression
+    │   ├── Logistic Regression
+    │   ├── KNN
+    │   ├── Decision Tree
+    │   ├── Random Forest
+    │   ├── SVM
+    │   └── Neural Networks
+    │
+    ├── 5. How is the model trained? does the model learn/update its parameters?
+    │   │   ├── Prediction
+    │   │   ├── Loss / Objective
+    │   │   ├── Derivatives
+    │   │   ├── Gradients
+    │   │   ├── Backpropagation
+    │   │   ├── Optimization
+    │   │   ├── Optimizers
+    │   │   ├── Iterations
+    │   │   └── Epochs
+    │
+    └── 6. MODEL EVALUATION
+        │
+        ├── Accuracy
+        ├── Precision
+        ├── Recall
+        ├── F1
+        ├── ROC
+        └── AUC
+#################################
+NEURAL NETWORKS
+│
+├── Neuron
+├── Input / weights / bias
+├── Activation functions
+│   ├── ReLU
+│   ├── Sigmoid
+│   ├── Tanh
+│   └── Softmax
+│
+├── Layers
+│   ├── Input
+│   ├── Hidden
+│   └── Output
+│
+├── Forward propagation
+├── Loss
+├── Derivatives
+├── Gradients
+├── Backpropagation
+├── Gradient descent
+├── Optimizers
+└── Training loop
+iterations epochs
+
+DEEP LEARNING ARCHITECTURES
+│
+├── CNN
+├── RNN
+├── Transformers
+├── Autoencoders
+└── Other modern architectures
+####################################
+
+####################################
+
+_________________________________________________________
+AI approaches 
+1. symbolic / rule bases approach :The system performs reasoning using rules, logics , symbols,facts, knowledge bases representations
+the system itself dont understand from the ifnromation , input along with human deinfed rules has to be given 
+Knowledge+Rules→Reasoning→Decision
+
+Examples of systems
+Expert systems
+Rule-based diagnostic systems
+MYCIN — an early medical expert system
+Prolog-based reasoning systems
+Rule engines
+
+----------------------------------------------------
+MACHINE LEARNING
+│
+├── prediction PROBLEM TYPES
+│   │
+│   ├── Regression : predict a continuous number
+│   └── Classification : predict a class or category 
+│
+├── CLASSICAL ML MODELS / ALGORITHMS
+│   │
+│   ├── Linear Regression
+│   ├── Logistic Regression
+│   ├── KNN
+│   ├── Decision Tree
+│   ├── Random Forest
+│   └── SVM
+│
+└── DEEP LEARNING
+    │
+    └── Neural Networks
+        │
+        ├── CNN
+        ├── RNN
+        ├── Transformers
+        ├── Autoencoders
+        └── other architectures
+________________________________________________________________
+
+2. MAHCINE LEARNIGN : The system learns patterns or relationships from data.(dont specify the rules)
+Data+Learning Algorithm→Learned Model
+in this along with data , we will give learning algorithm , the system itself understand the data and their paterrns , and interpret the results
+The learned model can then be used to make predictions or decisions for new data.
+
+Machine Learning includes:
+supervised learning
+unsupervised learning
+reinforcement learning
+semi-supervised learning
+
+Examples of ML algorithms:
+CLASSICAL ML
+Linear Regression : When predicting a continuous numerical output with a relatively simple relationship.
+Logistic Regression : When performing classification and you want a relatively simple interpretable model.
+Decision Tree :When tree-based decision rules are appropriate.
+Random Forest : When you want an ensemble of decision trees.
+SVM : When a maximum-margin decision boundary is useful.
+KNN : When similarity/distance between samples is meaningful.
+
+DEEP LEARNING
+Neural Network : When a flexible nonlinear model is appropriate, particularly with sufficient data and computational resources.
+CNN : Especially useful for structured spatial data such as images.
+RNN : Designed around sequential data; historically important for sequences such as time series and language.
+Transformers : Modern architecture particularly powerful for sequence and attention-based modeling.
+-------------------------------------------------------
+3. Neural Network-Based AI
+Neural networks use interconnected computational units called neurons to transform input data into outputs.
+network of mathematic computational units called neurons.The neural network processes them through interconnected neurons.
+WE GIVE NETWORK NUMERICAL INPUTS DERIVED FROM DATA 
+
+Input→Network→Prediction→Loss→Update weights
+
+A basic neuron performs: z=i=1∑n ​wi​xi​+b
+where: WEIGHT AND BIAS ARE THE PARAMETERS
+xi= input (numerical inputs
+wi= weight  ( A weight determines how strongly an input contributes to a neuron's calculation.)
+b = bias    adjustable constant added to the weighted input .(It allows the neuron to shift the activation function.) GIVES additional degree of freedom.
+z = weighted input
+
+An activation function is then applied: a=f(z)
+Neural networks can contain multiple layers.When many layers are used, we refer to this as Deep Learning.
+
+COMPARES PREDICTABLE DATA AND ACTUAL DATA ;
+They start with values that don't yet produce good predictions.The network processes training data.
+
+A=F(Z)
+Activation functions introduce non-linearity.if we want a neural network to learn complex nonlinear relationships, we introduce nonlinear activation functions.
+IMPORTNAC ACITVATION FUNCTION 
+ReLU means: Rectified Linear Unit 	ReLU(z)=max(0,z)
+sigmoid
+tanh
+softmax
+
+A neural network commonly has:
+
+Input layer		The input layer represents the features being given to the network.
+     ↓
+Hidden layer		A hidden layer is simply a layer of neurons between the input and output layers.
+     ↓
+Output layer
+
+------------------------------------------------------
+4. Evolutionary / Nature-Inspired Approaches
+These approaches are inspired by biological evolution and natural processes.
+A common example is a Genetic Algorithm.
+		Population→Selection→Crossover→Mutation→New Population
+The process iteratively searches for better solutions to a problem.
+----------------------------------------------------------------------------
+5. Probabilistic AI
+These methods represent uncertainty using probability.
+
+Instead of saying: P(A)=0 	or	P(A)=1
+
+a system can represent uncertainty such as: P(A)=0.85
+p(y=1/x)
+
+Important concepts include:
+
+probability distributions
+conditional probability
+Bayesian inference
+Bayesian networks
+------------------------------
+________________________________________________________________
+Important AI terminology
+1. Agent :An agent is a computational entity that perceives information from an environment and performs actions.
+2. Environment : The external system or world in which an agent operates.
+3. Perception : The process of obtaining information from the environment.
+4. State : The representation of the current condition of the environment relevant to decision-making.
+5. Action : An operation performed by an agent.
+6. Knowledge Representation : The representation of information in a form that a computer can use for reasoning.
+7. Reasoning : The process of deriving conclusions from available information.
+8. Learning : The process through which a system improves its behavior or predictive capability using data, experience, or feedback.
+9. Inference : Using available information and a model to derive an output or conclusion.
+10. Model : A mathematical or computational representation of a system, relationship, or learned pattern.
+11. Algorithm : A defined computational procedure used to solve a problem or perform a task.
+________________________________________________________________
+PARAMETERS VS HYPERPARAMETER:
+
+Parameters :Parameters are values that the model learns from the training data.(WEIGHT BIAS)
+
+Hyperparameters : Hyperparameters are settings that we generally choose before/during training, rather than the model learning them directly from the training data. HYPERPARAMTER IS USED TO FINE TUNE THE MODEL 
+
+HYPER PARAMETS TUNING 
+ A.grid search 
+ B.random search 
+ c.cv search 
+ d. bayessian optimization 
+
+learning rate
+number of trees in Random Forest
+maximum tree depth
+number of hidden layers
+number of neurons in a layer
+batch size
+number of epochs
+regularization strength
+_____________________________________________________________
+*************
+	MACHINE LEARNING
+*************
+Machine Learning is a field of AI in which a system learns patterns or relationships from data and uses the learned model to make predictions or decisions.
+
+ in this learning the data means ,It means the learning process uses the data to find parameter values that allow the model to make useful predictions., 
+x=input , y=output
+	 unknown relationship  :  y=f(x)
+f is the function we dont know what to apply the data 
+so the learning algoirhtm understand the under , and then apply the function to data along with parameter
+	learned model :		y^​=f^​(X;θ)
+now f^ is learned model ,  and theta is paramter which we learnt from the data 
+
+1. data consists of samples and associated varianble ,
+each row sample , and each column variable/features
+2. X∈Rn×p , to find how many samples and features are present
+3. target , output the model predict
+
+the basic workflow is 
+a. input data and output(know output)data are given to model
+b. training of data, model understand(the learning algorithm adjusts the model's parameters based on the training data.) the data(here we can use decision tree, neural netwokrs,linear regression)here while training of data parametes the model will give , by chnagin the parametes again and again we will get the predicted output 
+c. then it will give new output which is called as predicted output<y^)
+d. then the comparision of predicted y and known output y is done , the difference is then quantifies by a loss function , it calculated a numerical measure of error	L(y,y^)2
+e. the loss fucntin proecess uses the loss to determine how the parametes shld be chnages , paramtert update loop is happen after
+_________________________________________________
+LOSS FUCNTION : HOW THE MODEL WILL KNWO THE PREDICTION IS GOOD OR BAD
+a mathematical function that measures how wrong the prediction is.
+A loss function is a mathematical function that measures how different the model's prediction is from the actual target.
+
+A smaller loss generally means the prediction is closer to what we want.
+L=(y−y^​)2
+
+for differnt ml model (learning algorithm we use differnt appropriate loss)
+a.regression = meam squared error (MSE) , it will predcti number ,
+		MSE= i\n summation i=1 to n (y-y^)2
+b.classification : use cross-entropy or log loss , it will predict category
+
+MSE (Mean Squared Error) → regression
+MAE (Mean Absolute Error) → regression
+Binary Cross-Entropy → binary classification
+Categorical Cross-Entropy → multiclass classification
+Hinge Loss → commonly associated with SVM
+________________________________________________
+after predcition we will find loss fucniton , and then gradient and then comes optimizer
+____________________________________________________________
+OPTIMIZER: 
+optimizer means reducinf the loss by chnagine models parameters
+optimization : need a method for finding parameter values that minimize the loss.
+
+common ones
+adam ,
+gradient descent,
+momentum 
+_____________________________________________________________
+GRADIENT
+DERIVATIVE is the calculate to find how one quantity chnage when another quantity chnages 
+
+A gradient is a collection of derivatives that tells us how the loss changes with respect to each model parameter.
+how does loss changes , (DIRECTION OF INCREASING LOSS)
+__________________________________________________________________
+Loss function → measures how wrong the model is during training
+Gradient → tells how the loss changes when parameters change
+Optimizer → uses gradients to update parameters and reduce the loss
+Accuracy → measures how well the trained model performs on data
+
+loss → gradient → optimizer = learning
+accuracy → precision → recall → F1 → ROC/AUC = evaluation
+_____________________________________________-
+Regression / Classification = ML tasks
+Linear Regression / SVM / Neural Network = models
+Loss function = measures prediction error
+Optimization = finds parameters that improve the objective
+Backpropagation = calculates gradients in neural networks
+Optimizer = uses gradients to update parameters
+____________________________________________________________
+
+
+**MACHINE LEARNING PROBLEM TYPES ****
+Before the model deveolpement , we need to understand what kind of problme we are trying to solve
+a. regression : it is method to find the relstionship between dependent and independent variable (x ,y)
+here output is alwyas in numerical form 
+it is an ml problme type  where the target we want to predict is continous numerical value
+linear regression is a regression model 
+	y=Xw+b
+
+-----------------------------------------------------
+
+b. classification here the input is numerical data , but the outputis category or class, 
+
+y∈{0,1}		binary classification ( only two category , cancer or no cancer )
+classifcation is not done in one step as in linear regression 
+
+evaluation process in classifications
+1. input goes into logistic regression ( z=w1​x1​+w2​x2​+w3​x3​+b) combine all theh input with wieght to get the linear score
+2. sigmoid : The sigmoid function takes any number and converts it into a number between 0 and 1.
+3. threshold : commonly 0.5 
+the sigmoid will give some value between 0 and 1 , examples 0.82 , but where shld we consider to cancer or no cancer , thats where threshold will come , 
+<0.5 	 and >0.5
+4 then the final class or categrory is given , 
+this is the classification chain
+
+but when we have multiple patients , we need to compare with actual answers, for that we have confustin matrix
+
+                         	     ACTUAL
+                   		Cancer     No Cancer
+                 		┌─────────┬───────────┐
+Predicted Cancer │   TP    │    FP     │
+                 		├─────────┼───────────┤
+Predicted No     	│   FN    │    TN     │
+Cancer           	│            │              │
+                 		└─────────┴───────────┘ 
+
+a. TP = TRUE POSITIVE , A=cancer P= cancer
+b. TN = TRUE NEGAVTIVE , A=no cancer P=no cancer
+c. FP = FALSE POSITIVE , A=no cancer P= cancer
+d. FN = FALSE NEGATIVE , A= cancer P=no cancer 
+
+preciosion and recall ,
+precision = TP/TP+FP
+RECALL=  TP/TP+FN
+IN RECALL WE WILL THEN GO TO CHNAGE THE HTRESHOLD , ROC CURVE AND AUC 
+--------------------------------------------
+c. clustering , in clustering we dont knwo the target labels
+clusteirng means grouping of similar data points , and this is unsupervised learnigng
+so we just give input data and not give target labels like in regression and classification 
+ Divide or organize observations into groups based on their similarity according to the clustering algorithm.
+1. K means clustering :  here k represent the number of clustrer , it uses cluster centroids , 
+centroid is the repesentative center of cluster 
+step in k means : data points-choose k-initialize centroids-assign poitns to nearest centroid-recalculate centroids-repeat
+2. hierarchial clusterring : through hierarchy of relationshios between observations
+~~~~~~~~~~~
+Clustering : We don't tell the model what the groups are. We give it X and ask it to discover groups/patterns.
+Classification : We tell the model what the correct classes are, and it learns to predict those classes for new data
+-----------------------------------------
+d. dimensionality reduction : to reduce the dimension , 
+Create  new  representations  from  the  original  features. The new  dimensions may be combinations of many original features.
+here we use pca (principal component analysis)
+PCA transforms the original feature spcace into a new coordinate system, called principal componemts
+__________________________________________________
+Problem				What do we have?	What are we trying to obtain?
+Regression			(X,y)		Numerical value
+Classification			(X,y)		Class/category
+Clustering			(X)		Groups/structure
+Dimensionality Reduction		(X)		Lower-dimensional representation
+________________________________________________________________
+**** MACHINE LEARNING TYPES *****
+1. SUPERVISED LEARNING : model is trained using both input and known target output(output), then both used to predcti the output for new inputs
+in this the problem types are regresion and classification
+2.UNSUPERVISED LEARNING : here the model is given only the input data (X) without the know target output(Y), here the model learn to discover patternt , structres , relationships or groups within the data 
+in this the problem types are clusteirn(k means , heirarchial ,DBSCAN)
+3.SEMISUPERVISED LEARNING : here the model is trained using labelled and un labelled data
+labelled means = both input and knwon tagrte output is given 
+un labelled= menas only the input without targtet outptu 
+here we give small amount of labelled data , and large amount of unlabelled data to improve learnign and prediction.
+4. REINFORCEMENT LEARNING : here the agent leanrs to make decision by interacting with environment and recieving rewars or penalties  based on it actions , 
+state+action+rewards
+___________________________________________
+********DATA & MODEL DEVELOPMENT**************
+
+1. train validation , and test data :
+we divide the data into three parts of above mentioned
+if we give all the dataset to traimign, how to validate that model will work good for unknown data 
+a. trainig set : data uses to learn the models parameters
+
+b. validation set :  not used to learn parameters , used to make decisoin like which hyperparamters to choose , which model configuration is better, when to stop training in some training setups, which version of the model performs better
+train the models using the training data and compare their performance on the validation data.
+
+	Validation data helps us choose/tune the model This connects directly to hyperparameter tuning.
+validate data to decide which one/configuration performs best without touching the final test set.
+
+c. test set : until final evalution of model , trian set is kept aside 
+to check how the final model performs on unseen data.
+____________________________________________________--
+2. Generalization : abaility of trained model to perform well on unseen data which is same of prblm and distirbution as traingn data 
+not the types of generalization , but closely related to this 
+APPROPIRTATE COMPLEXITY 
+
+a. overfitting : the model learns trianig data too specifically , means byheart it inlcuidng the patterns and noise ,so it is not that fit or dont generalize unseen data perfectly 
+here trianing error is less :: validate error is more
+TOO COMPLEX
+
+b. underfitting : model is not capable of representing the importnat patter or data 
+it did not leanr perfectly all the pateerns in the trianing data 
+in this the error is more in both training and validate data 
+TOO SIMPLE
+
+UNDERFITTING : Didn't learn enough : Poor generalization
+GOOD FIT :Learned useful patterns :Good generalization
+OVERFITTING :Learned training data too specifically :Poor generalization
+_____________________________________________
+3. CROSS VALIDATION : here it used multiple trani or validation set 
+here the the model is given trained set and is ready , but when we give validation set ,if that set is easy or difficult that chnages the model estimation 
+so here using cross validation it uses multiple trained or validation splits
+Evaluates a configuration across multiple train/validation splits.
+
+a. K-fold Cross-Validation : here k is the number of fold
+we didvide the trianig dataset into n folds,
+now as exmaples i took k=5 (fold 1,2,3,4,5)
+in round 1 , we keep fold 1 as validation set and other 4 as traing set,  like this round 5 will do in a loop
+so that we will get a lot of traing and validation set data 
+later we get many validation scores and we take the average of that , then the model is process to test data 
+___________________________________________
+4. HYPERPARAMETER:
+A hyperparameter is a configuration or setting that is specified before or during model training and is not learned automatically from the training data. It controls how the model is built or how the learning algorithm trains the model.
+
+For example, in a Decision Tree:
+maximum depth
+minimum samples required to split
+minimum samples in a leaf
+
+In Random Forest:
+number of trees
+maximum depth
+number of features considered for a split
+
+In a Neural Network:
+learning rate
+batch size
+number of epochs
+number of hidden layers
+number of neurons
+regularization strength
+
+Hyperparamter Tuning = searching for good hyperparameter values for a model.
+by trying differnt values , will train the model aqnd evaluated which settigns works the best 
+tuning approaches : to search good hyperparametes :
+for hyperparamter selection :  search method + cross validation
+seach method is grid search and random search  (BOTH ARE scikit learn)
+
+a. GRID SEARCH : systematiclaly try all specified combinations 
+ Grid Search creates the specified combinations , Each combination is evaluated. Then we select the best-performing combination. 
+in grid search we will use , cross validation to select specific combination which suits 
+GridSearchCV
+
+b. RANDOM SEARCH : Randomly samples configurations(HYOER from the search space. 
+does not evaluate every possible combination 
+it samples combinations randomly from the specified hyperparameter ranges/distributions.
+RandomizedSearchCV
+
+C. CV : EVALUTEES A CONFIGURATION ACCORSS MUTIPLE TRAIN OR VALIDATION SPLITS 
+___________________________________________________
+dataset 
+deicde problem type (rgession , classification , clusteirn )
+data preprocessing (clean data , handle missing values , feature enginerring , 	festure selection, scaling or normalization 
+train /validation / test data
+trianing data(learning approach )  (supervised , unsuepr vised)
+choose a model (linear regsression , logistic , neural  )
+choose a hyperparatmer ,(grid search random search )
+train the model(loss function,derivative,gradients,back % forward propogationn)
+cross validation for evalution 
+train final model 
+test set
+final performance (accuracy , precision, recall )
+_____________________________________________________________________
+5.FEATURE ENGINERRING :
+this is belong to data procesing before we split the data into 3 sets
+this belongs to data preprocessing 
+Before a model learns from data, we need to decide what information we actually give to the model.
+FEAUTRE means the input vairbalt we give to model to make the predictions 
+
+Feature engineering is the process of transforming or constructing input variables so that they represent useful information for the mode
+converting the raw data to useful model features 
+trnasofmation may be creating new features , trasforming , combining , extracting ifnor from raw data
+
+types or examples of transofmration :
+a. log trasnofmration : X`=log(X)(feature transformation=transofmring existing feature (log transofmration , box-cox transofmration )
+b. feature creation : creating existing features 
+c. encoding categorical features : category to numerical (label encoding , target encoding , one hot encoding , ordinal encoding )
+d. binnig : ocvert continous values into groups 
+e. feature extraction : extract useful iformantion from raw data 
+f. handlind missing values 
+g. scaling OR  : . transofrming numerical feature to comparable ranges 
+	stradidization 
+	min-max scaling 
+_________________________________________________________
+6. FEATURE SELECTION :  Selecting a subset of the available input features that will be used by the model.
+WE CHOOSE WHICH FEATURES SHLD BE USED 
+it is not dimentison reduction , here we will keep the original features , in dimension recuditon , it will created a lower dinenstional representations 
+
+IN enginerring we create or trasnform featires , selection we select the exisitng features
+threee approcahc of feature selection  
+FEATURE FILTERING : 
+Feature filtering is a general idea of removing features that don't meet some criterion before or during model development.
+VARIANCE : HOW MUCH  VALUES VARY ACROSS SAMPLES if variance is less , we will remove that because there will be no diversity in the data 
+WRAPPER METHODS
+EMBEDDED METHODS
+__________________________________________________________
+
+7. DATA TRASNFORMATIONS : A data transformation applies a mathematical operation to feature values to create a new representation of the data.
+DATA VALurs have distirbtuin or scale that is not same or convieninet 
+
+Log transformation : changes representation/distribution of values 
+X=log(x)
+Scaling : changes numerical scale
+x= x- means /sd
+
+a. log transofmraiton  : log transformation compresses the range, especially at the high end. (compress large valued relative to smaller ones )
+b. ordinary logirithm : applies for negative and zero values 
+log(1+x)
+_______________________________________________________________
+8. STRANDADIZATION : usinG StandadrScaler (from scikit-learn)
+
+Standardization converts the original values into a standardized scale based on the mean and standard deviation.
+to put them onto a comparable scale 
+it tranform a features so that values are centers around 0 and expresses ineterm of sd
+xscaled​=x−μ​​/σ
+after strandidation , feautre has approximatel mean=0 , sd=1
+__________________________________________________
+9. min-max scaling L uses minimuam , max values of feautues 
+	​
+ x scales = x-x(min) / x(max) - x(min)
+__________________________________________________
+**********
+the porblme association with data and modle development is , data leakage , overfittign , underfitting 
+a.Data leakage happens when information that should not be available during training accidentally enters the training process.
+b. bias and varinace 
+high bias : underfittin 
+high varinace ; overfittin 
+c. Regularization : Regularization is a technique used to control model complexity and reduce overfitting.
+__________________________________________________________
+	​
+sklearn  (python machine learning library 
+│
+├── model_selection
+│   └── train_test_split
+│
+├── linear_model
+│   ├── LinearRegression
+│   └── LogisticRegression
+│
+├── tree
+│   └── DecisionTreeClassifier / Regressor
+│
+├── ensemble
+│   └── RandomForest
+│
+├── svm
+│   └── SVC / SVR
+│
+├── neighbors
+│   └── KNeighborsClassifier / Regressor
+│
+├── preprocessing
+│   ├── StandardScaler
+│   └── MinMaxScaler
+│
+└── metrics
+    ├── mean_squared_error
+    ├── accuracy_score
+    ├── precision_score
+    ├── recall_score
+    └── f1_score 
+
+llms: Text
+ ↓
+Tokenization
+ ↓
+Tokens
+ ↓
+Embeddings
+ ↓
+Transformer
+ ↓
+Output probabilities
+ ↓
+Next token
+
+
+rag : 
+pdf loader, chunksing , embedding , vecotr databser, retrivael , augmnetation ,genration
+
+Large Language Model is a neural network trained on large amounts of text to learn patterns in language and generate/predict tokens.
+
+
+
+self-attention :whcih token is impt(query, key vale)
+positional information
+feed-forward networks
+normalization
+residual connections
+
+
+Document
+   ↓
+Loader
+   ↓
+Chunking
+   ↓
+Embedding
+   ↓
+Vector Database
+   ↓
+Retriever
+   ↓
+Relevant Context
+   ↓
+Prompt
+   ↓
+LLM
+   ↓
+Generated Answer
+
+And:
+
+Embedding → numerical representation of meaning
+Vector DB → stores/searches embeddings
+Retriever → finds relevant information
+Chunk → smaller piece of a document
+Context → information supplied to the LLM
+Reranker → improves ordering/relevance of retrieved results
+Hybrid search → combines semantic/vector search with keyword search
+RAG → retrieval + context augmentation + generation
+Most important interview questions to prepare
+What is an LLM?
+What is a Transformer?
+What is attention?
+What is an embedding?
+What is tokenization?
+What is RAG?
+Why do we need RAG?
+Explain the complete RAG pipeline.
+What is chunking and why is it needed?
+What is a vector database?
+What is similarity search?
+What is cosine similarity?
+What is a retriever?
+What is reranking?
+What is hybrid search?
+RAG vs fine-tuning?
+What is hallucination?
+What is context window?
+What is temperature?
+How would you improve a poorly performing RAG system?
+_____________________________________________________________
+
+REINFORCEMENT LEARNING :: machine learnig where an agent learns what actions to take by interacting with environemnt and recieving rewards or penalties 
+State → Action → Reward/Penalty → Learn
+
+| Component      	 	| Meaning                        |
+| --------------- 		| ------------------------------ |
+| **Agent**       		| Learner/decision maker         |
+| **Environment**	| World the agent interacts with |
+| **State**       		| Current situation              |
+| **Action**      		| What the agent can do          |
+| **Reward**      		| Feedback for the action        |
+
+other reinforcement algorithms : Q-learning, DQN, A2C, and A3C. 
+
+A3C asynchronous Advantage Actor-Crtic 
+Actor → learns the policy: what action to take.
+Critic → learns the value function: how good the current state/action situation is.
+Asynchronous → multiple worker agents train a shared global model asynchronously.
+
+
+
+
